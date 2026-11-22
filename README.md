@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>A lean ⌥Tab window switcher for macOS.</b><br>
-  Every window, not just every app. About 15 MB of memory. No screen recording.
+  Every window, not just every app. Under 20 MB of memory. No screen recording.
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@ macOS's ⌘Tab switches between **apps**. If you have three browser windows open
 
 [AltTab](https://github.com/lwouis/alt-tab-macos) is excellent and has many more features. Flick goes the other way and does one thing with as little as possible:
 
-- **Small.** About 15 MB while idle and under 20 MB after heavy use, measured with `footprint` on macOS 27. The panel's views are built when it opens and thrown away when it closes.
+- **Small.** 15–18 MB while idle and about 21 MB with the panel open, measured with `footprint` on macOS 27. The panel's views are built when it opens and thrown away when it closes, so memory returns to idle afterwards (checked over 30 open/close cycles).
 - **No window previews.** Live thumbnails are what make switchers heavy, and they need Screen Recording permission. Flick shows each window's app icon and title instead.
 - **Fast.** All apps are asked for their windows in parallel, so listing takes about 30 ms. A quick ⌥Tab tap switches without the panel ever appearing.
 - **Native.** Plain AppKit, written in Rust with [`objc2`](https://github.com/madsmtm/objc2). No SwiftUI, no web view, no runtime to load.
